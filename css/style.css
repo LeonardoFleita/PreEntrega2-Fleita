@@ -160,7 +160,7 @@ a{
     justify-content: center;
 }
 
-.sinopsis__parrafo{
+.sinopsis__texto{
     font-family: 'Asap', sans-serif;
     font-size: 1.5em;
     font-weight: 700;
@@ -223,7 +223,7 @@ a{
         padding: 10em 15em 0em 15em;
     }
 
-    .sinopsis__parrafo{
+    .sinopsis__texto{
         font-size: 2.2em;
     }
 
@@ -273,7 +273,7 @@ a{
         padding: 6em 0em 0em 10em;
     }
 
-    .sinopsis__parrafo{
+    .sinopsis__texto{
         font-size: 1.8em;
     }
 
@@ -327,6 +327,125 @@ a{
     background-size: cover;
     background-position: top center;
     grid-area: mainQuienesSomos;
+    padding: 5em 8em 5em 8em;
+}
+
+.mainQuienesSomos__grilla{
+    display: grid;
+    grid-template-areas:
+    "quienesSomos"
+    "fotoCalavera"
+    "integrantes";
+    justify-items: center;
+}
+
+.quienesSomos{
+    padding: 5em 0em 4em 0em;
+    grid-area: quienesSomos;
+}
+
+.quienesSomos__texto{
+    color: #3d3d3d;
+    font-family: 'Asap', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding-top: 1em;
+}
+
+.fotoCalavera{
+    padding: 3em 0em 4em 0em;
+    grid-area: fotoCalavera;
+}
+
+.fotoCalavera__img{
+    height: 25em;
+}
+
+.integrantes{
+    padding: 6em 0em 4em 0em;
+    grid-area: integrantes;
+}
+
+.datos__link--img{
+    height: 7em;
+}
+
+.fotoCara__img{
+    height: 15em;
+}
+
+.fotoCara__img--dami{
+    height: 14em;
+}
+
+.fotoCara__img--nati{
+    height: 15.5em;
+}
+
+.integrantes__grilla{
+    display: grid;
+    grid-template-areas: 
+    "caraNati datosNati"
+    "caraFlute datosFlute"
+    "caraFranco datosFranco"
+    "caraDami datosDami";
+    row-gap: 8em;
+    column-gap: 4em;
+    justify-items: center;
+    align-items: center;
+    padding-top: 5em;
+}
+
+.caraNati{
+    grid-area: caraNati;
+    padding-top: 2em;
+}
+
+.datosNati{
+grid-area: datosNati;
+}
+
+.caraFlute{
+    grid-area: caraFlute;
+}
+
+.datosFlute{
+    grid-area: datosFlute;
+}
+
+.caraFranco{
+    grid-area: caraFranco;
+}
+
+.datosFranco{
+    grid-area: datosFranco;
+}
+
+.caraDami{
+    grid-area: caraDami;
+}
+
+.datosDami{
+    grid-area: datosDami;
+}
+
+.datos__titulo{
+    font-family: 'Asap', sans-serif;
+    color: white;
+    font-size: 2.5em;
+    font-weight: 800;
+}
+
+.datos__texto{
+    color: #3d3d3d;
+    font-family: 'Asap', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding-right: 10em;
+}
+
+@media(min-width: 768px){
+
 }
 
 /* Estilos footer */
