@@ -441,7 +441,6 @@ grid-area: datosNati;
     font-family: 'Asap', sans-serif;
     font-size: 1.5em;
     font-weight: 600;
-    padding-right: 10em;
 }
 
 @media(min-width: 768px){
