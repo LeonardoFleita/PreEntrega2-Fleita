@@ -9,6 +9,10 @@ html{
     font-size: 62.5%;
 }
 
+a{
+    text-decoration: none;
+}
+
 /* Header */
 
 .cabecera{
@@ -44,7 +48,6 @@ html{
 }
 
 .menu__link{
-    text-decoration: none;
     color: #cbdd74;
     transition: color 0.5s;
 }
@@ -195,14 +198,14 @@ html{
     width: 55em; 
 }
 
-.fotoCalaveras{
+.fotoPose{
     padding: 10em 9em 0em 9em;
     grid-area: fotoCalaveras;
     justify-self: center;
     align-self: flex-end;
 }
 
-.fotoCalaveras__img{
+.fotoPose__img{
     width: 60em;
 }
 
@@ -247,11 +250,11 @@ html{
         width: 25em;
     }
 
-    .fotoCalaveras{
-        padding: 0em 9em 0em 9em;
+    .fotoPose{
+        padding: 0em 0em 0em 0em;
     }
 
-    .fotoCalaveras__img{
+    .fotoPose__img{
         width: 80em;
     }
 }
@@ -300,13 +303,30 @@ html{
         width: 20em;
     }
 
-    .fotoCalaveras{
+    .fotoPose{
         padding: 0em 0em 0em 10em;
     }
 
-    .fotoCalaveras__img{
+    .fotoPose__img{
         width: 70em;
     }
+}
+
+/* Estilos Quienes somos */
+
+.grilla__quienesSomos{
+    display: grid;
+    grid-template-areas: 
+            "header"
+            "mainQuienesSomos"
+            "footer";
+}
+
+.mainQuienesSomos{
+    background: url('../img/quienesSomos/fondoQuienesSomos.jpg') #bdc945;
+    background-size: cover;
+    background-position: top center;
+    grid-area: mainQuienesSomos;
 }
 
 /* Estilos footer */

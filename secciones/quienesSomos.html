@@ -10,76 +10,88 @@
 </head>
 
 <body>
-    
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html" class="menu">Home</a></li>
-                <li><a href="./quienesSomos.html" class="menu">Quiénes somos</a></li>
-                <li><a href="./laMesaDeAlLado.html" class="menu">La mesa de al lado</a></li>
-                <li><a href="./destacados.html" class="menu">Destacados</a></li>
-                <li><a href="./contacto.html" class="menu">Contacto</a></li>
-                <li class="vivo">
-                    <a href="https://youtu.be/FveYMfj-dJQ" class="vivo__link" target="_blank"><img src="../img/vivo.png"
-                    alt="link al vivo en youtube" class="vivo__link--icono"></a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <div class="grilla__quienesSomos">
+        <header class="cabecera">
+            <nav class="navBar">
+                <ul class="navBar__lista">
+                    <li class="menu"><a href="../index.html" class="menu__link">Home</a></li>
+                    <li class="menu"><a href="./quienesSomos.html" class="menu__link">Quiénes somos</a></li>
+                    <li class="menu"><a href="./laMesaDeAlLado.html" class="menu__link">La mesa de al lado</a></li>
+                    <li class="menu"><a href="./destacados.html" class="menu__link">Destacados</a></li>
+                    <li class="menu"><a href="./contacto.html" class="menu__link">Contacto</a></li>
+                    <li class="vivo">
+                        <a href="https://youtu.be/FveYMfj-dJQ" class="vivo__link" target="_blank"><img src="../img/vivo.png"
+                        alt="link al vivo en youtube" class="vivo__link--icono"></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-    <main class="mainQuienesSomos">
-        <section class="quienesSomos">
-            <div class="quienesSomos__texto">
-                <h1 class="quienesSomos__texto--titulo">Quiénes somos</h1>
-                <p class="quienesSomos__texto--parrafo">La Última Cena es un programa semanal de entretenimientos de carácter temático, de 2 horas de duración.</p> 
-                <p class="quienesSomos__texto--parrafo">La mayoría de las secciones se construyen a partir de un disparador, en forma de consigna. La misma nos sirve para que les oyentes participen del programa y de los sorteos, y para lograr un hilo conductor fluido entre los contenidos y la improvisación.</p>
+        <main class="mainQuienesSomos">
+            <div class="mainQuienesSomos__grilla">
+                <section class="quienesSomos">
+                    <div class="quienesSomos__texto">
+                        <div class="quienesSomos__texto--titulo"><img src="../img/quienesSomos/quienesSomos.png" alt="Quienes Somos"></div>
+                        <p class="quienesSomos__texto--parrafo">La Última Cena es un programa semanal de entretenimientos de carácter temático, de 2 horas de duración.</p> 
+                        <p class="quienesSomos__texto--parrafo">La mayoría de las secciones se construyen a partir de un disparador, en forma de consigna. La misma nos sirve para que les oyentes participen del programa y de los sorteos, y para lograr un hilo conductor fluido entre los contenidos y la improvisación.</p>
+                    </div>
+                </section>
+
+                <section class="foto">
+                    <div>
+                        <img src="../img/quienesSomos/calavera.png" alt="Foto calavera" class="quienesSomos__foto">
+                    </div>
+                </section>    
+
+                <section class="integrantes">
+                    <div><img src="../img/quienesSomos/integrantes.png" alt="Integrantes" class="integrantes__titulo"></div>
+                    <div class="integrantes__contenido">
+                        <div class="contenedorIntegrante">
+                            <a href="">
+                                <img src="../img/quienesSomos/natiBucchino.png" alt="@natibucchino" class="integrantes__contenido--nombre">
+                            </a>
+                            <h3>Conducción</h3>
+                            <p>Curiosidades, datos extraños del mundo y test flasheros</p>
+                        </div>
+                        <div class="contenedorIntegrante">
+                            <a href="">
+                                <img src="../img/quienesSomos/flutewav.png" alt="@flutewav" class="integrantes__contenido--nombre">
+                            </a>
+                            <h3>Música y Juegos</h3>
+                            <p>Trivias y canciones populares, con un touch romantic</p>
+                        </div>
+                        <div class="contenedorIntegrante">
+                            <a href="">
+                                <img src="../img/quienesSomos/donGuzzo.png" alt="@donguzzo" class="integrantes__contenido--nombre">
+                            </a>
+                            <h3>Humor</h3>
+                            <p>Personajes delirantes varios. La perlita del show: Norita,<br> nuestra diva rancia</p>
+                        </div>
+                        <div class="contenedorIntegrante">
+                            <a href="">
+                                <img src="../img/quienesSomos/elNegritoDami.png" alt="@elnegritodami" class="integrantes__contenido--nombre">
+                            </a> 
+                            <h3>Cultura Millenial</h3>
+                            <p>La nostalgia noventosa al taco y algunos juagos evocativos</p>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div>
-                <img src="../img/quienesSomos/calavera.png" alt="Foto calavera" class="quienesSomos__foto">
-            </div>    
-        </section>
+        </main>
 
-        <section class="integrantes">
-            <!-- misma duda que en el index respecto a si necesito la etiqueta h para títulos que son imágenes -->
-            <h2><img src="../img/quienesSomos/integrantes.png" alt="Integrantes" class="integrantes__titulo"></h2>
-            <div class="integrantes__contenido">
-                <div class="contenedorIntegrante">
-                    <img src="../img/quienesSomos/natiBucchino.png" alt="@natibucchino" class="integrantes__contenido--nombre">
-                    <h3>Conducción</h3>
-                    <p>Curiosidades, datos extraños del mundo y test flasheros</p>
-                </div>
-                <div class="contenedorIntegrante">
-                    <img src="../img/quienesSomos/flutewav.png" alt="@flutewav" class="integrantes__contenido--nombre">
-                    <h3>Música y Juegos</h3>
-                    <p>Trivias y canciones populares, con un touch romantic</p>
-                </div>
-                <div class="contenedorIntegrante">
-                    <img src="../img/quienesSomos/donGuzzo.png" alt="@donguzzo" class="integrantes__contenido--nombre">
-                    <h3>Humor</h3>
-                    <p>Personajes delirantes varios. La perlita del show: Norita,<br> nuestra diva rancia</p>
-                </div>
-                <div class="contenedorIntegrante">
-                    <img src="../img/quienesSomos/elNegritoDami.png" alt="@elnegritodami" class="integrantes__contenido--nombre">
-                    <h3>Cultura Millenial</h3>
-                    <p>La nostalgia noventosa al taco y algunos juagos evocativos</p>
+        <footer>
+            <img src="../img/logoCalavera.png" alt="Logo programa" class="footer__logoCalavera">
+            <div class="footer__redes">
+                <h3 class="footer__redes--texto">Seguinos en nuestras redes</h3>
+                <div class="footer__redes--contenedor">
+                    <a href="https://www.facebook.com/laultimacenaradio" target="_blank"><img src="../img/facebook.png" alt="Logo facebook" class="footer__redes--logo"></a>
+                    <a href="https://www.instagram.com/laultimacenafm/" target="_blank"><img src="../img/instagram.png" alt="Logo instagram" class="footer__redes--logo"></a>
+                    <a href="https://open.spotify.com/show/17M0n4ZuL0c2QqEfdHVclH" target="_blank"><img src="../img/spotify.png" alt="Logo spotify" class="footer__redes--logo"></a>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <img src="../img/logoCalavera.png" alt="Logo programa" class="footer__logoCalavera">
-        <div class="footer__redes">
-            <h3 class="footer__redes--texto">Seguinos en nuestras redes</h3>
-            <div class="footer__redes--contenedor">
-                <a href="https://www.facebook.com/laultimacenaradio" target="_blank"><img src="../img/facebook.png" alt="Logo facebook" class="footer__redes--logo"></a>
-                <a href="https://www.instagram.com/laultimacenafm/" target="_blank"><img src="../img/instagram.png" alt="Logo instagram" class="footer__redes--logo"></a>
-                <a href="https://open.spotify.com/show/17M0n4ZuL0c2QqEfdHVclH" target="_blank"><img src="../img/spotify.png" alt="Logo spotify" class="footer__redes--logo"></a>
-            </div>
-        </div>
-        <img src="../img/logoBotellon.png" alt="Logo botellon" class="footer__logoBotellon">
-    </footer> 
-
+            <img src="../img/logoBotellon.png" alt="Logo botellon" class="footer__logoBotellon">
+        </footer>
+    </div>
 </body>
 
 </html>
