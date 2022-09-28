@@ -138,6 +138,7 @@ a{
     background-position: top center;
     background-size: cover;
     grid-area: mainIndex;
+    padding: 7em 8em 0em 8em;
 }
 
 .mainIndex__grilla{
@@ -148,11 +149,11 @@ a{
     "demo"
     "fotoCalaveras";
     justify-content: center;
+    justify-items: center;
 }
 
 .sinopsis{
     grid-area: sinopsis;
-    padding: 10em 8em 0em 8em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -168,28 +169,28 @@ a{
 }
 
 .sinopsis__titulo--img{
-    width: 27em;
+    width: 32em;
 }
 
 .serpiente{
-    padding: 5em 0em 0em 5em;
+    padding: 5em 2.5em 0em 0em;
     grid-area: serpiente;
     align-self: center;
     justify-self: center;
 }
 
 .serpiente__img{
-    height: 30em;
+    height: 33em;
 }
 
 .demo{
-    padding: 10em 1em 0em 1em;
     grid-area: demo;
+    padding-top: 5em;
     justify-self: center;
 }
 
 .demo__titulo--img{
-    width: 17em;
+    width: 18em;
 }
 
 .demo__video{
@@ -198,7 +199,7 @@ a{
 }
 
 .fotoPose{
-    padding: 10em 9em 0em 9em;
+    padding-top: 5em;
     grid-area: fotoCalaveras;
     justify-self: center;
     align-self: flex-end;
@@ -210,51 +211,29 @@ a{
 
 @media(min-width:768px){
     .mainIndex__grilla{
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto auto;
         row-gap: 10em;
         grid-template-areas: "sinopsis sinopsis"
         "demo serpiente"
         "fotoCalaveras fotoCalaveras";
     }
 
-    .sinopsis{
-        padding: 10em 10em 0em 10em;
-    }
-
-    .sinopsis__texto{
-        font-size: 1.8em;
-    }
-
-    .sinopsis__titulo--img{
-        width: 40em;
-    }
-    
     .serpiente{
-        padding: 0em 10em 0em 0em;
+        padding: 0 0 0.5em 9.5em;
         justify-self: end;
         align-self: end;
     }
 
-    .serpiente__img{
-        height: 33em;
-    }
-    
     .demo{
-        padding: 0em 10em 0em 10em;
+        padding: 0em;
         align-self: end;
     }
 
-    .demo__titulo--img{
-        width: 25em;
-    }
-
     .fotoPose{
-        padding: 0em 5em 0em 0em;
+        padding: 0em;
     }
 
     .fotoPose__img{
-        width: 90em;
+        width: 70em;
     }
 }
 
@@ -263,51 +242,33 @@ a{
         display: grid;
         grid-template-columns: 72em 72em;
         column-gap: 2em;
-        grid-template-rows: 1fr 1fr;
         grid-template-areas: "sinopsis serpiente"
         "fotoCalaveras demo";
+        align-items: start;
     }
 
     .sinopsis{
-        padding: 6em 0em 0em 10em;
+        width: 70em;
     }
-
-    .sinopsis__texto{
-        font-size: 1.8em;
-    }
-
-    .sinopsis__titulo--img{
-        width: 35em;
-    }
-    
 
     .serpiente{
-        padding: 12em 0em 0em 5em;
+        padding: 0em 0em 0em 5em;
         justify-self: center;
         align-self: center;
     }
 
-    .serpiente__img{
-        height: 30em;
-    }
-    
     .demo{
-        padding: 0em 10em 0em 10em;
         justify-self: center;
         align-self: center;
         padding-bottom: 2em;
     }
 
-    .demo__titulo--img{
-        width: 20em;
-    }
-
     .fotoPose{
-        padding: 0em 0em 0em 10em;
+        padding: 0em 0em 0em 0em;
     }
 
-    .fotoPose__img{
-        width: 70em;
+    .serpiente__img{
+        height: 30em;
     }
 }
 
@@ -326,7 +287,7 @@ a{
     background-size: cover;
     background-position: top center;
     grid-area: mainQuienesSomos;
-    padding: 5em 8em 5em 8em;
+    padding: 7em 8em 5em 8em;
 }
 
 .mainQuienesSomos__grilla{
@@ -461,10 +422,11 @@ grid-area: datosNati;
 
     .quienesSomos{
         padding: 0;
+        width: 55em;
     }
     
     .fotoCalavera{
-        padding: 0em 0em 0em 10em;
+        padding: 0 0 0 6em;
     }
 }
 
@@ -486,14 +448,12 @@ grid-area: datosNati;
     }
 
     .fotoCalavera{
-        padding: 0em 0em 0em 0em;
         justify-self: center;
     }
 
-    .quienesSomos{
-        width: 55em;
+    .fotoCalavera{
+        padding: 0em;
     }
-
 }
 
 /* Estilos footer */
