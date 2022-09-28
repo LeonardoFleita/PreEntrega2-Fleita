@@ -33,14 +33,15 @@ a{
 
 .navBar__lista{
     border: 0.05em white solid;
-    border-left: 0px;
-    border-right: 0px;
+    border-left: 0;
+    border-right: 0;
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0em;
+    margin: 0;
 }
 
 .menu{
@@ -71,7 +72,7 @@ a{
 @media(min-width: 768px){
 
     .navBar{
-        font-size: 2.8em;
+        font-size: 2.2em;
     }
 
     .navBar__lista{
@@ -133,7 +134,7 @@ a{
 }
 
 .mainIndex{
-    background: url('../img/index/fondoIndex1.jpg') #B5B5B5;
+    background: url('../img/index/fondoIndex.jpg') #B5B5B5;
     background-position: top center;
     background-size: cover;
     grid-area: mainIndex;
@@ -141,8 +142,6 @@ a{
 
 .mainIndex__grilla{
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto;
     column-gap: 2em;
     grid-template-areas: "sinopsis"
     "serpiente"
@@ -212,7 +211,7 @@ a{
 @media(min-width:768px){
     .mainIndex__grilla{
         grid-template-columns: auto auto;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
         row-gap: 10em;
         grid-template-areas: "sinopsis sinopsis"
         "demo serpiente"
@@ -220,11 +219,11 @@ a{
     }
 
     .sinopsis{
-        padding: 10em 15em 0em 15em;
+        padding: 10em 10em 0em 10em;
     }
 
     .sinopsis__texto{
-        font-size: 2.2em;
+        font-size: 1.8em;
     }
 
     .sinopsis__titulo--img{
@@ -232,18 +231,18 @@ a{
     }
     
     .serpiente{
-        padding: 0em 15em 0em 0em;
+        padding: 0em 10em 0em 0em;
         justify-self: end;
         align-self: end;
     }
 
     .serpiente__img{
-        height: 40em;
+        height: 33em;
     }
     
     .demo{
-        padding: 5em 15em 0em 15em;
-        align-self: center;
+        padding: 0em 10em 0em 10em;
+        align-self: end;
     }
 
     .demo__titulo--img{
@@ -251,11 +250,11 @@ a{
     }
 
     .fotoPose{
-        padding: 0em 0em 0em 0em;
+        padding: 0em 5em 0em 0em;
     }
 
     .fotoPose__img{
-        width: 80em;
+        width: 90em;
     }
 }
 
@@ -340,7 +339,7 @@ a{
 }
 
 .quienesSomos{
-    padding: 5em 0em 4em 0em;
+    padding: 0em 0em 4em 0em;
     grid-area: quienesSomos;
 }
 
@@ -423,6 +422,7 @@ grid-area: datosNati;
 
 .caraDami{
     grid-area: caraDami;
+    padding-top: 1.5em;
 }
 
 .datosDami{
@@ -444,12 +444,55 @@ grid-area: datosNati;
 }
 
 @media(min-width: 768px){
+    .mainQuienesSomos__grilla{
+        column-gap: 5em;
+        grid-template-areas:
+        "quienesSomos fotoCalavera"
+        "integrantes integrantes";
+        justify-items: start;
+        align-items: center;
+    }
+
+    .quienesSomos{
+        padding: 0;
+    }
+    
+    .fotoCalavera{
+        padding: 0em 0em 0em 10em;
+    }
+}
+
+@media(min-width: 1024px){
+    .mainQuienesSomos__grilla{
+        column-gap: 5em;
+        grid-template-columns: 60em auto;
+        grid-template-areas:
+        "quienesSomos fotoCalavera"
+        "integrantes integrantes";
+        justify-content: center;
+    }
+
+    .integrantes__grilla{
+        display: grid;
+        grid-template-areas: 
+        "caraNati datosNati caraFlute datosFlute"
+        "caraFranco datosFranco caraDami datosDami";
+    }
+
+    .fotoCalavera{
+        padding: 0em 0em 0em 0em;
+        justify-self: center;
+    }
+
+    .quienesSomos{
+        width: 55em;
+    }
 
 }
 
 /* Estilos footer */
 
-footer {
+footer{
     background-color: rgb(34, 34, 34);
     border: 1px white solid;
     border-left: 0px;
@@ -466,6 +509,11 @@ footer {
     color: #cbdd74;
     font-family: 'Open Sans', sans-serif;
     font-size: 2.5em;
+    margin: 0;
+}
+
+.footer__redes--link{
+    height: auto;
 }
 
 .footer__logoCalavera{
