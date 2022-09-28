@@ -367,6 +367,11 @@ a{
 
 .datos__link--img{
     height: 7em;
+    padding-bottom: 0.2em;
+}
+
+.datos__link--img:hover{
+    transform: scale(1.1);
 }
 
 .fotoCara__img{
@@ -442,6 +447,7 @@ grid-area: datosNati;
     font-size: 1.5em;
     font-weight: 600;
 }
+
 
 @media(min-width: 768px){
     .mainQuienesSomos__grilla{
