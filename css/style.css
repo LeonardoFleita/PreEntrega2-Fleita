@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: content-box;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap');
@@ -25,7 +26,6 @@ a{
 
 .navBar{ 
     font-family: 'Open Sans', sans-serif;
-    color: #cbdd74;
     font-weight: 700;
     font-size: 2em;
     background-color: rgb(34, 34, 34);
@@ -69,37 +69,10 @@ a{
     transform: scale(1.1);
 }
 
-@media(min-width: 768px){
-
-    .navBar{
-        font-size: 2.2em;
-    }
-
-    .navBar__lista{
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 0.5em 0em 0.5em 0em;
-    }
-
-    .menu{
-        padding: 0em 1em 0em 1em;
-    }
-
-    .vivo__link--icono{
-        padding-left: 1em;
-        padding-right: 1em;
-        height: 1.5em;
-    }
-}
 
 @media(min-width: 1024px){
     .cabecera{
         background-size: 210vh;
-    }
-
-    .navBar{
-        font-size: 2.2em;
     }
 
     .navBar__lista{
@@ -116,100 +89,103 @@ a{
     .menu{
         padding: 0em 1em 0em 1em;
     }
-
-    .vivo__link--icono{
-        padding-left: 0em;
-        padding-right: 0em;
-    }
 }
 
 /* Estilos index */
 
-.grilla__index{
-    display: grid;
-    grid-template-areas: 
-            "header"
-            "mainIndex"
-            "footer";
-}
+@media(min-width: 600px){
 
-.mainIndex{
-    background: url('../img/index/fondoIndex.jpg') #B5B5B5;
-    background-position: top center;
-    background-size: cover;
-    grid-area: mainIndex;
-    padding: 7em 8em 0em 8em;
-}
+    .grilla__index{
+        display: grid;
+        grid-template-areas: 
+                "header"
+                "mainIndex"
+                "footer";
+    }
 
-.mainIndex__grilla{
-    display: grid;
-    column-gap: 2em;
-    grid-template-areas: "sinopsis"
-    "serpiente"
-    "demo"
-    "fotoCalaveras";
-    justify-content: center;
-    justify-items: center;
-}
+    .mainIndex{
+        background: url('../img/index/fondoIndex.jpg') #B5B5B5;
+        background-position: top center;
+        background-size: cover;
+        grid-area: mainIndex;
+        padding: 7em 8em 0em 8em;
+    }
 
-.sinopsis{
-    grid-area: sinopsis;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
+    .mainIndex__grilla{
+        display: grid;
+        column-gap: 2em;
+        grid-template-areas: "sinopsis"
+        "serpiente"
+        "demo"
+        "fotoCalaveras";
+        justify-content: center;
+        justify-items: center;
+    }
 
-.sinopsis__texto{
-    font-family: 'Asap', sans-serif;
-    font-size: 1.5em;
-    font-weight: 700;
-    color: #3d3d3d;
-    padding-top: 2em;
-}
+    .sinopsis{
+        grid-area: sinopsis;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    .sinopsis__titulo--img{
+        width: 24em;
+    }
 
-.sinopsis__titulo--img{
-    width: 32em;
-}
+    .sinopsis__texto{
+        font-family: 'Asap', sans-serif;
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #3d3d3d;
+        padding-top: 2em;
+    }
 
-.serpiente{
-    padding: 5em 2.5em 0em 0em;
-    grid-area: serpiente;
-    align-self: center;
-    justify-self: center;
-}
+    .serpiente{
+        padding: 5em 2.5em 0em 0em;
+        grid-area: serpiente;
+        align-self: center;
+        justify-self: center;
+    }
 
-.serpiente__img{
-    height: 33em;
-}
+    .serpiente__img{
+        height: 20em;
+    }
 
-.demo{
-    grid-area: demo;
-    padding-top: 5em;
-    justify-self: center;
-}
+    .demo{
+        grid-area: demo;
+        padding-top: 5em;
+        justify-self: center;
+    }
 
-.demo__titulo--img{
-    width: 18em;
-}
+    .demo__titulo--img{
+        width: 14em;
+    }
 
-.demo__video{
-    padding-top: 1em;
-    width: 55em; 
-}
 
-.fotoPose{
-    padding-top: 5em;
-    grid-area: fotoCalaveras;
-    justify-self: center;
-    align-self: flex-end;
-}
+    .demo__link--video{
+        padding-top: 1em;
+        width: 40em; 
+        height: 25em;
+    }
 
-.fotoPose__img{
-    width: 60em;
-}
+    .fotoPose{
+        padding-top: 3em;
+        grid-area: fotoCalaveras;
+        justify-self: center;
+        align-self: flex-end;
+    }
 
+    .fotoPose__img{
+        width: 43em;
+    }
+}
 @media(min-width:768px){
+    .mainIndex{
+        padding: 7em 6em 0em 6em;
+        }
+    
     .mainIndex__grilla{
         row-gap: 10em;
         grid-template-areas: "sinopsis sinopsis"
@@ -217,10 +193,17 @@ a{
         "fotoCalaveras fotoCalaveras";
     }
 
+    .sinopsis{
+        width: 60em;
+    }
+
     .serpiente{
-        padding: 0 0 0.5em 9.5em;
-        justify-self: end;
+        padding: 0;
         align-self: end;
+    }
+
+    .serpiente__img{
+        height: 23.5em;
     }
 
     .demo{
@@ -233,186 +216,220 @@ a{
     }
 
     .fotoPose__img{
-        width: 70em;
+        width: 55em;
     }
 }
 
-@media(min-width:1024px){
-    .mainIndex__grilla{
-        display: grid;
-        grid-template-columns: 72em 72em;
-        column-gap: 2em;
+@media(min-width: 1024px){
+
+    .sinopsis{
+        width: 85em;
+    }
+
+    .fotoPose__img{
+        width: 60em;
+    }
+
+}
+
+@media(min-width:1300px){
+    
+        .mainIndex__grilla{
         grid-template-areas: "sinopsis serpiente"
         "fotoCalaveras demo";
-        align-items: start;
+        align-items: center;
     }
 
     .sinopsis{
-        width: 70em;
+        width: 50em;
+    }
+
+    .sinopsis__titulo--img{
+        width: 30em;
+    }
+
+    .demo__titulo--img{
+        width: 18em;
     }
 
     .serpiente{
         padding: 0em 0em 0em 5em;
-        justify-self: center;
-        align-self: center;
-    }
-
-    .demo{
-        justify-self: center;
-        align-self: center;
-        padding-bottom: 2em;
-    }
-
-    .fotoPose{
-        padding: 0em 0em 0em 0em;
     }
 
     .serpiente__img{
+        height: 30em;
+    }
+
+    .demo{
+        padding-bottom: 2em;
+    }
+
+    .demo__link--video{
+        padding-top: 4em;
+        width: 50em;
         height: 30em;
     }
 }
 
 /* Estilos Quienes somos */
 
-.grilla__quienesSomos{
-    display: grid;
-    grid-template-areas: 
-            "header"
-            "mainQuienesSomos"
-            "footer";
-}
+@media(min-width: 600px){
+    .grilla__quienesSomos{
+        display: grid;
+        grid-template-areas: 
+                "header"
+                "mainQuienesSomos"
+                "footer";
+    }
 
-.mainQuienesSomos{
-    background: url('../img/quienesSomos/fondoQuienesSomos.jpg') #bdc945;
-    background-size: cover;
-    background-position: top center;
-    grid-area: mainQuienesSomos;
-    padding: 7em 8em 5em 8em;
-}
+    .mainQuienesSomos{
+        background: url('../img/quienesSomos/fondoQuienesSomos.jpg') #bdc945;
+        background-size: cover;
+        background-position: top center;
+        grid-area: mainQuienesSomos;
+        padding: 7em 8em 5em 8em;
+    }
 
-.mainQuienesSomos__grilla{
-    display: grid;
-    grid-template-areas:
-    "quienesSomos"
-    "fotoCalavera"
-    "integrantes";
-    justify-items: center;
-}
+    .mainQuienesSomos__grilla{
+        display: grid;
+        grid-template-areas:
+        "quienesSomos"
+        "fotoCalavera"
+        "integrantes";
+        justify-items: center;
+    }
 
-.quienesSomos{
-    padding: 0em 0em 4em 0em;
-    grid-area: quienesSomos;
-}
+    .quienesSomos{
+        padding: 0em 0em 4em 0em;
+        grid-area: quienesSomos;
+    }
+    
+    .quienesSomos__titulo--img{
+        height: 8em;
+    }
 
-.quienesSomos__texto{
-    color: #3d3d3d;
-    font-family: 'Asap', sans-serif;
-    font-size: 1.5em;
-    font-weight: 600;
-    padding-top: 1em;
-}
+    .quienesSomos__texto{
+        color: #3d3d3d;
+        font-family: 'Asap', sans-serif;
+        font-size: 1.5em;
+        font-weight: 600;
+        padding-top: 1em;
+    }
 
-.fotoCalavera{
-    padding: 3em 0em 4em 0em;
-    grid-area: fotoCalavera;
-}
+    .fotoCalavera{
+        padding: 3em 0em 4em 0em;
+        grid-area: fotoCalavera;
+    }
 
-.fotoCalavera__img{
-    height: 25em;
-}
+    .fotoCalavera__img{
+        height: 25em;
+    }
 
-.integrantes{
-    padding: 6em 0em 4em 0em;
-    grid-area: integrantes;
-}
+    .integrantes{
+        padding: 6em 0em 4em 0em;
+        grid-area: integrantes;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 
-.datos__link--img{
-    height: 7em;
-    padding-bottom: 0.2em;
-}
+    .integrantes__titulo--img{
+        height: 8em;
+    }
+    
+    .integrantes__grilla{
+        display: grid;
+        grid-template-areas: 
+        "caraNati datosNati"
+        "caraFlute datosFlute"
+        "caraFranco datosFranco"
+        "caraDami datosDami";
+        row-gap: 8em;
+        column-gap: 4em;
+        justify-items: center;
+        align-items: center;
+        padding-top: 5em;
+    }
 
-.datos__link--img:hover{
-    transform: scale(1.1);
-}
+    .datos{
+        width: 28em;
+    }
 
-.fotoCara__img{
-    height: 15em;
-}
 
-.fotoCara__img--dami{
-    height: 14em;
-}
+    .datos__link--img{
+        height: 5em;
+        padding-bottom: 0.2em;
+        transition: all 0.3s;
+    }
 
-.fotoCara__img--nati{
-    height: 15.5em;
-}
+    .datos__link--img:hover{
+        transform: scale(1.1);
+    }
 
-.integrantes__grilla{
-    display: grid;
-    grid-template-areas: 
-    "caraNati datosNati"
-    "caraFlute datosFlute"
-    "caraFranco datosFranco"
-    "caraDami datosDami";
-    row-gap: 8em;
-    column-gap: 4em;
-    justify-items: center;
-    align-items: center;
-    padding-top: 5em;
-}
+    .fotoCara__img{
+        height: 13em;
+    }
 
-.caraNati{
-    grid-area: caraNati;
-    padding-top: 2em;
-}
+    .fotoCara__img--dami{
+        height: 14em;
+    }
 
-.datosNati{
-grid-area: datosNati;
-}
+    .fotoCara__img--nati{
+        height: 15.5em;
+    }
 
-.caraFlute{
-    grid-area: caraFlute;
-}
+    .caraNati{
+        grid-area: caraNati;
+        padding-top: 2em;
+    }
 
-.datosFlute{
-    grid-area: datosFlute;
-}
+    .datosNati{
+    grid-area: datosNati;
+    }
 
-.caraFranco{
-    grid-area: caraFranco;
-}
+    .caraFlute{
+        grid-area: caraFlute;
+    }
 
-.datosFranco{
-    grid-area: datosFranco;
-}
+    .datosFlute{
+        grid-area: datosFlute;
+    }
 
-.caraDami{
-    grid-area: caraDami;
-    padding-top: 1.5em;
-}
+    .caraFranco{
+        grid-area: caraFranco;
+    }
 
-.datosDami{
-    grid-area: datosDami;
-}
+    .datosFranco{
+        grid-area: datosFranco;
+    }
 
-.datos__titulo{
-    font-family: 'Asap', sans-serif;
-    color: white;
-    font-size: 2.5em;
-    font-weight: 800;
-}
+    .caraDami{
+        grid-area: caraDami;
+        padding-top: 1.5em;
+    }
 
-.datos__texto{
-    color: #3d3d3d;
-    font-family: 'Asap', sans-serif;
-    font-size: 1.5em;
-    font-weight: 600;
-}
+    .datosDami{
+        grid-area: datosDami;
+    }
 
+    .datos__titulo{
+        font-family: 'Asap', sans-serif;
+        color: white;
+        font-size: 2em;
+        font-weight: 800;
+    }
+
+    .datos__texto{
+        color: #3d3d3d;
+        font-family: 'Asap', sans-serif;
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+}
 
 @media(min-width: 768px){
     .mainQuienesSomos__grilla{
-        column-gap: 5em;
+        column-gap: 2em;
         grid-template-areas:
         "quienesSomos fotoCalavera"
         "integrantes integrantes";
@@ -422,38 +439,269 @@ grid-area: datosNati;
 
     .quienesSomos{
         padding: 0;
-        width: 55em;
+    }
+
+    .quienesSomos__titulo--img{
+        height: 6em;
     }
     
     .fotoCalavera{
-        padding: 0 0 0 6em;
+        padding: 0;
     }
+    
+    .fotoCalavera__img{
+        height: 20em;
+    }
+
+    .integrantes__titulo--img{
+        height: 7em;
+    }
+
 }
 
 @media(min-width: 1024px){
     .mainQuienesSomos__grilla{
-        column-gap: 5em;
-        grid-template-columns: 60em auto;
-        grid-template-areas:
-        "quienesSomos fotoCalavera"
-        "integrantes integrantes";
+        column-gap: 1em;
         justify-content: center;
     }
 
     .integrantes__grilla{
-        display: grid;
         grid-template-areas: 
         "caraNati datosNati caraFlute datosFlute"
         "caraFranco datosFranco caraDami datosDami";
     }
 
-    .fotoCalavera{
-        justify-self: center;
+    .quienesSomos{
+        width: 60em;
     }
 
-    .fotoCalavera{
-        padding: 0em;
+    .quienesSomos__titulo--img{
+        height: 8em;
     }
+    
+    .integrantes__titulo--img{
+        height: 8em;
+    }
+
+    .datos{
+        width: 25em;
+    }
+
+    .fotoCara__img{
+        height: 11em;
+    }
+}
+
+@media(min-width: 1300px){
+    .quienesSomos{
+        width: 65em;
+    }
+
+    .datos{
+        width: 30em;
+    }
+
+    .fotoCara__img{
+        height: 16em;
+    }
+}
+
+/* Estilos la mesa de al lado */
+@media(min-width: 600px){
+    .grilla__mesaDeAlLado{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "mainMesa"
+        "footer";
+    }
+
+    .mainMesa{
+        background: url('../img/laMesaDeAlLado/fondoLaMesaDeAlLado.jpg') #000000;
+        background-size: cover;
+        background-position: top center;
+        grid-area: mainMesa;
+        padding: 7em 8em 5em 8em;
+    }
+
+    .mainMesa__grilla{
+        display: grid;
+        grid-template-areas: 
+        "mesa"
+        "carrusel";
+        justify-items: center;
+    }
+
+    .mesa{
+        grid-area: mesa;
+    }
+
+    .mesa__titulo{
+        padding-bottom: 5em;
+    }
+
+    .mesa__titulo--img{
+        height: 10em;
+    }
+
+    .mesa__texto{
+        color: white;
+        font-family: 'Asap', sans-serif;
+        font-size: 1.5em;
+        font-weight: 600;
+        padding-top: 1em;
+    }
+
+    .carrusel{
+        padding-top: 5em;
+        width: 40em;
+        grid-area: carrusel;
+    }
+}
+
+@media(min-width: 768px){
+
+    .carrusel{
+        width: 60em;
+    }
+}
+
+@media(min-width: 1024px){
+    
+    .mesa{
+        width: 85em;
+    }
+    
+    .mesa__titulo--img{
+        height: 13em;
+    }
+
+    .carrusel{
+        width: 85em;
+    }
+}
+
+@media(min-width: 1300px){
+    
+    .mesa{
+        width: 100em;
+    }
+
+    .carrusel{
+        width: 100em;
+    }
+}
+
+/* Estilos main destacados (esta página no la toqué para esta entrega) */
+
+.mainDestacados{
+    background: url('../img/quienesSomos/fondoQuienesSomos.jpg') #bdc945;
+    background-size: 100%;
+    background-position: top center;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.destacados__texto{
+    color: #3d3d3d;
+    font-family: 'Asap', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+.destacados__texto--titulo{
+    color: white;
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+
+.destacados__texto--parrafo{
+    padding: 10px 0px 10px 0px;
+}
+
+.videos{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 250px 50px 250px;
+}
+
+.videos__destacado{
+    padding: 10px 10px 10px 10px;
+    height: 200px;
+}
+
+/* Estilos main contacto (esta página no la toqué para esta entrega) */
+
+.mainContacto{
+    background: url('../img/contacto/fondoContacto.jpg') rgb(44, 44, 44);
+    background-position: top center;
+    background-size: 100%;
+    padding: 5%;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Asap', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.contacto__texto{
+    padding: 0px 250px 50px 250px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+fieldset{
+    color: #cbdd74;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    border: none;
+    font-weight: 300;   
+}
+
+.contacto__texto--titulo{
+    color: #cbdd74;
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+
+textarea{
+    margin-top: 15px;
+    width: 600px;
+    height: 250px;
+    resize: none;
+}
+
+form{
+    padding-right: 50px;
+}
+
+.formulario__imagen{
+    height: 450px;
+    padding-left: 50px;
+}
+
+.formulario__boton{
+    padding: 5px;
+    margin-top: 5px;
+    background-color: transparent;
+    border-color: #cbdd74;
+    color: #cbdd74;
 }
 
 /* Estilos footer */
@@ -461,35 +709,31 @@ grid-area: datosNati;
 footer{
     background-color: rgb(34, 34, 34);
     border: 1px white solid;
-    border-left: 0px;
-    border-right: 0px;
+    border-left: 0;
+    border-right: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     grid-area: footer;
-    padding: 4em 0em 4em 0em;
+    padding: 0.8em 0em 0.8em 0em;
 }
 
 .footer__redes--texto{
     color: #cbdd74;
     font-family: 'Open Sans', sans-serif;
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0;
-}
-
-.footer__redes--link{
-    height: auto;
 }
 
 .footer__logoCalavera{
     height: 7.5em;
-    padding: 7em 2em 2em 2em;
+    padding: 2em;
 }
 
 .footer__logoBotellon{
     height: 7.5em;
-    padding: 7em 2em 2em 2em;
+    padding: 2em;
 }
 
 .footer__redes{
@@ -500,57 +744,12 @@ footer{
 }
 
 .footer__redes--logo{
-    height: 7em;
-    padding: 3em 1.5em 0em 1.5em;
+    height: 5em;
+    padding: 1em;
     transition: all 0.5s;
 }
 
 .footer__redes--logo:hover{
     transform: scale(1.2);
 }
-
-@media(min-width: 768px){
-
-    footer{
-        padding: 2em 0em 2em 0em;
-    }
-
-    .footer__logoCalavera{
-        height: 9em;
-        padding: 2em;
-    }
-    
-    .footer__logoBotellon{
-        height: 9em;
-        padding: 2em;
-    }
-}
-
-@media(min-width: 1024px){
-
-    footer{
-        padding: 0.8em 0em 0.8em 0em;
-    }
-
-    .footer__redes--texto{
-        font-size: 2em;
-    }
-
-    .footer__redes--logo{
-        height: 5em;
-        padding: 1em 1em 1em 1em;
-    }
-
-    .footer__logoCalavera{
-        height: 7.5em;
-        padding: 2em;
-    }
-    
-    .footer__logoBotellon{
-        height: 7.5em;
-        padding: 2em;
-    }
-}
-
-
 

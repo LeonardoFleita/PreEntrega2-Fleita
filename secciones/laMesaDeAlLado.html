@@ -5,48 +5,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La última cena</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
+    <title>La última cena</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html" class="menu">Home</a></li>
-                <li><a href="./quienesSomos.html" class="menu">Quiénes somos</a></li>
-                <li><a href="./laMesaDeAlLado.html" class="menu">La mesa de al lado</a></li>
-                <li><a href="./destacados.html" class="menu">Destacados</a></li>
-                <li><a href="./contacto.html" class="menu">Contacto</a></li>
-                <li class="vivo">
-                <a href="https://youtu.be/FveYMfj-dJQ" class="vivo__link" target="_blank"><img src="../img/vivo.png"
-                alt="link al vivo en youtube" class="vivo__link--icono"></a>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="mainLMDeAlLado">
-        <section class="lMDeAlLado">
-            <!-- La misma duda que en index con respecto a h1 con fotos -->
-            <h1><img src="../img/laMesaDeAlLado/laMesaDeAlLado.png" alt="La mesa de al lado" class="lMDeAlLado__titulo"></h1>
-            <p class="lMDeAlLado__texto--parrafo">Es un segmento actoral grupal, en el que con la excusa de “escuchar lo que ocurre en la mesa de al lado” del restaurante en el que estamos cenando, surgen escenas por demás bizarras y delirantes.</p>
-            <p class="lMDeAlLado__texto--parrafo">En formato de radioteatro corto y guionado, propone una amplitud para la improvisación y el juego en vivo. En cada emisión vamos variando el estilo, por ejemplo: español, doblaje latino, italianos, novela mexicana, entre otros. Se encuentra a la mitad del programa funcionando como hilo conductor entre el inicio y cierre del mismo. </p>
-            <img src="../img/laMesaDeAlLado/laMesaDeAlLadoFoto.png" alt="Foto La mesa de al lado" class="lMDeAlLado__foto">            
-        </section>
-    </main>
-
-    <footer>
-        <img src="../img/logoCalavera.png" alt="Logo programa" class="footer__logoCalavera">
-        <div class="footer__redes">
-            <h3 class="footer__redes--texto">Seguinos en nuestras redes</h3>
-            <div class="footer__redes--contenedor">
-                <a href="https://www.facebook.com/laultimacenaradio" target="_blank"><img src="../img/facebook.png" alt="Logo facebook" class="footer__redes--logo"></a>
-                <a href="https://www.instagram.com/laultimacenafm/" target="_blank"><img src="../img/instagram.png" alt="Logo instagram" class="footer__redes--logo"></a>
-                <a href="https://open.spotify.com/show/17M0n4ZuL0c2QqEfdHVclH" target="_blank"><img src="../img/spotify.png" alt="Logo spotify" class="footer__redes--logo"></a>
+    <div class="grilla__mesaDeAlLado">
+        <header class="cabecera">
+            <nav class="navBar">
+                <ul class="navBar__lista">
+                    <li class="menu"><a href="../index.html" class="menu__link">Home</a></li>
+                    <li class="menu"><a href="./quienesSomos.html" class="menu__link">Quiénes somos</a></li>
+                    <li class="menu"><a href="./laMesaDeAlLado.html" class="menu__link">La mesa de al lado</a></li>
+                    <li class="menu"><a href="./destacados.html" class="menu__link">Destacados</a></li>
+                    <li class="menu"><a href="./contacto.html" class="menu__link">Contacto</a></li>
+                    <li class="vivo">
+                        <a href="https://youtu.be/FveYMfj-dJQ" class="vivo__link" target="_blank"><img src="../img/vivo.png"
+                            alt="link al vivo en youtube" class="vivo__link--icono"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            
+        <main class="mainMesa">
+            <div class="mainMesa__grilla">
+                <section class="mesa">
+                    <div class="mesa__titulo">
+                        <img src="../img/laMesaDeAlLado/laMesaDeAlLado.png" alt="La mesa de al lado" class="mesa__titulo--img">
+                    </div>
+                    <p class="mesa__texto">Es un segmento actoral grupal, en el que con la excusa de “escuchar lo que ocurre en la mesa de al lado” del restaurante en el que estamos cenando, surgen escenas por demás bizarras y delirantes.</p>
+                    <p class="mesa__texto">En formato de radioteatro corto y guionado, propone una amplitud para la improvisación y el juego en vivo. En cada emisión vamos variando el estilo, por ejemplo: español, doblaje latino, italianos, novela mexicana, entre otros. Se encuentra a la mitad del programa funcionando como hilo conductor entre el inicio y cierre del mismo. </p>           
+                </section>
+                <section class="carrusel">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../img/laMesaDeAlLado/laMesaDeAlLado_foto01.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/laMesaDeAlLado/laMesaDeAlLado_foto02.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/laMesaDeAlLado/laMesaDeAlLado_foto03.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/laMesaDeAlLado/laMesaDeAlLado_foto04.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/laMesaDeAlLado/laMesaDeAlLado_foto05.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/laMesaDeAlLado/laMesaDeAlLado_foto06.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+                </section>
             </div>
-        </div>
-        <img src="../img/logoBotellon.png" alt="Logo botellon" class="footer__logoBotellon">
-    </footer>
+        </main>
+
+        <footer>
+            <img src="../img/logoCalavera.png" alt="Logo programa" class="footer__logoCalavera">
+            <div class="footer__redes">
+                <h3 class="footer__redes--texto">Seguinos en nuestras redes</h3>
+                <div class="footer__redes--contenedor">
+                    <a href="https://www.facebook.com/laultimacenaradio" target="_blank"><img src="../img/facebook.png" alt="Logo facebook" class="footer__redes--logo"></a>
+                    <a href="https://www.instagram.com/laultimacenafm/" target="_blank"><img src="../img/instagram.png" alt="Logo instagram" class="footer__redes--logo"></a>
+                    <a href="https://open.spotify.com/show/17M0n4ZuL0c2QqEfdHVclH" target="_blank"><img src="../img/spotify.png" alt="Logo spotify" class="footer__redes--logo"></a>
+                </div>
+            </div>
+            <img src="../img/logoBotellon.png" alt="Logo botellon" class="footer__logoBotellon">
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
